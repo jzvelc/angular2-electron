@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-rm -rf ./app/dist ./app/node_modules
+DEBUG="${DEBUG:-}"
+
 mkdir -p ./app/dist
 cp ./package.json ./src/main.js app/dist
 
@@ -14,7 +15,7 @@ else
   dev_node_modules_volume="./node_modules"
   app_node_modules_volume="./app/node_modules"
 
-  if [[ -n "${DEBUG}" ]]; then
+  if [[ -z "${DEBUG}" ]]; then
     dev_node_modules_volume="brisket-dev-node-modules"
     app_node_modules_volume="brisket-app-node-modules"
   fi
