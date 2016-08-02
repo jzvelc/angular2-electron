@@ -1,0 +1,17 @@
+{
+  "name": "angular2-electron",
+  "productName": "Angular2 Electron",
+  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "version": "0.0.1",
+  "author": {
+    "name": "DLabs",
+    "email": "info@dlabs.si"
+  },
+  "main": "./dist/main.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.12.0",
+    "electron-debug": "^1.0.1"
+  }
+}
