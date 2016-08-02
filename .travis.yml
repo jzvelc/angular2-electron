@@ -22,3 +22,11 @@ cache:
   - app/node_modules
   - $HOME/.electron
   - $HOME/.cache
+
+branches:
+  only:
+    - master
+    - develop
+
+script:
+  - bash ./bin/travis.sh
