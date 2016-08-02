@@ -9,6 +9,7 @@
   ],
   "homepage": "https://github.com/angularclass/angular2-webpack-starter",
   "scripts": {
+    "postinstall": "install-app-deps",
      "rimraf": "rimraf",
      "tslint": "tslint",
      "typedoc": "typedoc",
@@ -152,7 +153,7 @@
     "webpack-merge": "^0.14.0",
 
     "electron-builder": "next",
-    "electron-prebuilt": "^1.2.0"
+    "electron-prebuilt": "^1.2.2"
   },
   "repository": {
     "type": "git",

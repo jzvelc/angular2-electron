@@ -1,0 +1,6 @@
+.git/
+.idea/
+node_modules/
+app/dist/
+app/node_modules/
+dist/
