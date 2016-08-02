@@ -18,3 +18,7 @@ else
 	docker run --rm -it -v ${PWD}:/project -v brisket-node-modules:/project/node_modules brisket webpack --config ./config/webpack.electron.js  --progress --profile --colors --display-error-details --display-cached --bail
 	docker run --rm -it -v ${PWD}:/project -v brisket-node-modules:/project/node_modules brisket ./node_modules/.bin/build -lw
 fi
+
+if [[ "${TRAVIS_BRANCH}" == "develop" ]]; then
+  echo "develop"
+fi
