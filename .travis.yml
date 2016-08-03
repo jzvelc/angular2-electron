@@ -5,9 +5,15 @@ matrix:
       language: node_js
       node_js:
         - "6"
+      before_install:
+        - brew install jq
     - os: linux
       dist: trusty
       sudo: required
+      addons:
+        apt:
+          packages:
+            - jq
       services:
         - docker
       before_install:
@@ -24,6 +30,5 @@ branches:
   only:
     - master
     - develop
-
 script:
   - bash ./bin/travis.sh
