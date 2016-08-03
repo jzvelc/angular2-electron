@@ -11,14 +11,13 @@ endpoint="https://api.github.com/repos/${TRAVIS_REPO_SLUG}"
 if [[ "${TRAVIS_BRANCH}" == "develop" ]]; then
   # Create new beta channel version
   releases=$(curl -s -H "Authorization: token ${GH_TOKEN}" ${endpoint}/releases)
-  tags=($(echo ${releases} | jq --raw-output ".[].tag_name"))
   ver=$(jq --raw-output  ".version" app/package.json)
-  rev=${ver}
+  rev="v${ver}"
   exists="1"
   cnt=1
   while [[ -n "${exists}" ]]; do
     rev="v0.0.1-beta.${cnt}"
-    exists=$(echo ${releases} | jq --raw-output ".[] | select(.tag_name == \"${rev}\")")
+    exists=$(echo ${releases} | jq --raw-output ".[] | select(.tag_name == \"${rev}\") | select(.draft == false)")
     let cnt++
   done
   rev=${rev:1}
