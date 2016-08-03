@@ -7,7 +7,7 @@
     "webpack",
     "typescript"
   ],
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "homepage": "https://github.com/jzvelc/angular2-electron",
   "scripts": {
     "postinstall": "install-app-deps",
      "rimraf": "rimraf",
@@ -157,10 +157,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/jzvelc/angular2-electron.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/jzvelc/angular2-electron/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
