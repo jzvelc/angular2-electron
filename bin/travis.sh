@@ -17,7 +17,7 @@ if [[ "${TRAVIS_BRANCH}" == "develop" ]]; then
   exists="1"
   cnt=1
   while [[ -n "${exists}" ]]; do
-    rev="v0.0.1-beta${cnt}"
+    rev="v0.0.1-beta.${cnt}"
     exists=$(echo ${releases} | jq --raw-output ".[] | select(.tag_name == \"${rev}\")")
     let cnt++
   done
