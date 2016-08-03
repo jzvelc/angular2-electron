@@ -190,7 +190,7 @@
       ]
     },
     "mac": {
-      "target": ["dmg", "mas", "zip"]
+      "target": ["dmg", "zip"]
     },
     "win": {
       "target": ["squirrel", "zip"],
