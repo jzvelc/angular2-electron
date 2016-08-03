@@ -189,8 +189,16 @@
         }
       ]
     },
+    "mac": {
+      "target": ["dmg", "mas", "zip"]
+    },
+    "win": {
+      "target": ["squirrel", "zip"],
+      "msi": true,
+      "remoteReleases": true
+    },
     "linux": {
-      "target": ["deb", "AppImage"]
+      "target": ["deb", "rpm", "tar.gz"]
     }
   }
 }

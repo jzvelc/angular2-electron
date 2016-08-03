@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  nuts:
+    image: gitbook/nuts:3.1.1
+    container_name: nuts
+    environment:
+      - GITHUB_REPO=${NUTS_GITHUB_REPO}
+      - GITHUB_TOKEN=${NUTS_GITHUB_TOKEN}
+      - API_USERNAME=${NUTS_API_USERNAME}
+      - API_PASSWORD=${NUTS_API_PASSWORD}
+    ports:
+      - 80
+    restart: always
+  haproxy:
+    image: tutum/haproxy:0.2.4.1
+    ports:
+      - 80:80
+    links:
+      - nuts:nuts
+    restart: always

@@ -33,7 +33,6 @@ if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
   cp ./package.json ./src/main.js app/dist
   npm install
   ./node_modules/.bin/webpack --config ./config/webpack.electron.js  --progress --profile --colors --display-error-details --display-cached --bail
-  ./node_modules/.bin/build -m
 
   if [[ "${TRAVIS_BRANCH}" == "develop" ]]; then
     ./node_modules/.bin/build -m -p always --prerelease
